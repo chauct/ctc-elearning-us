@@ -1,0 +1,25 @@
+.course {
+  margin-top: 120px;
+}
+.course .nav {
+  background-image: url("https://demo.themeies.com/elearning-react/static/media/page-feat.72b8f22a.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  position: relative;
+}
+.course .nav::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.775);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.course .nav .breadcrumb {
+  z-index: 100;
+}
