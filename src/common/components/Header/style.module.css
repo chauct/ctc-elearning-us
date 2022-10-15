@@ -48,8 +48,8 @@
   border: none;
   background: linear-gradient(90deg, #ef470d, #ffb800);
   color: #fff;
-  transition: all 0.5s;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 .header .btn_login:hover {
   color: #000;

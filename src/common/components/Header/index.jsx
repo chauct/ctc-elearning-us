@@ -6,6 +6,9 @@ function Header() {
   const goToHome = () => {
     history.push("/");
   };
+  const goToLogin = () => {
+    history.push("/login");
+  };
   return (
     <>
       <div className={styles.header}>
@@ -33,7 +36,9 @@ function Header() {
                 </li>
               </ul>
             </div>
-            <button className={styles.btn_login}>Đăng nhập</button>
+            <button onClick={goToLogin} className={styles.btn_login}>
+              Đăng nhập
+            </button>
           </div>
         </div>
       </div>

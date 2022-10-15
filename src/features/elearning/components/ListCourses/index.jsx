@@ -1,4 +1,4 @@
-import { Col, Row } from "antd";
+import { Col, Row, Spin } from "antd";
 import React, { useEffect } from "react";
 import styles from "./style.module.css";
 import backend from "assets/img/backend.png";
@@ -9,6 +9,12 @@ import ItemCourses from "../ItemCourses";
 
 function ListCourses() {
   const listCourses = useSelector((state) => state.elearning.listCourses);
+  if (!listCourses)
+    return (
+      <div style={{ textAlign: "center" }}>
+        <Spin size="large" />
+      </div>
+    );
   console.log(listCourses);
   const settings = {
     dots: true,

@@ -1,22 +1,42 @@
 import instance from "api/instance";
 
-export const SET_CATES = "elearning/SET_CATES";
-
-export const fetchCatesAction = async (dispatch) => {
+export const SET_LIST_COURSES = "elearning/SET_LIST_COURSES";
+export const SET_COURSE_DETAIL = "elearning/SET_COURSE_DETAIL";
+export const fetchListCourseAction = async (dispatch) => {
   try {
     const res = await instance.request({
       url: "/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc",
       method: "GET",
       params: {
-        maNhom: "GP01",
+        MaNhom: "GP01",
       },
     });
     dispatch({
-      type: SET_CATES,
-      payload: res.data.content,
+      type: SET_LIST_COURSES,
+      payload: res.data,
     });
-    console.log(res, "list movie");
+    console.log(res.data);
   } catch (error) {
     console.log("errors", error.response?.data);
   }
+};
+export const fetchDetailCourseAction = (id) => {
+  return async (dispatch) => {
+    try {
+      const res = await instance.request({
+        url: "/api/QuanLyKhoaHoc/LayThongTinKhoaHoc",
+        method: "GET",
+        params: {
+          maKhoaHoc: id,
+        },
+      });
+      dispatch({
+        type: SET_COURSE_DETAIL,
+        payload: res.data,
+      });
+      // console.log(res.data);
+    } catch (error) {
+      console.log("errors", error.response?.data);
+    }
+  };
 };

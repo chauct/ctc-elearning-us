@@ -1,0 +1,110 @@
+.detail {
+  padding: 140px 0;
+}
+.img {
+  position: relative;
+}
+.img img {
+  width: 730px;
+  height: 410px;
+}
+.img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.337);
+  top: 0;
+  left: 0;
+}
+.content {
+  margin-top: 20px;
+  padding: 30px;
+  border: 1px solid #e0e4e6;
+  border-radius: 3px;
+}
+.content h2 {
+  font-size: 36px;
+  color: #0c2e60;
+}
+.content p {
+  color: #0c2e60;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.content .info span {
+  color: rgb(157, 157, 157);
+  margin-right: 5px;
+}
+
+/* right */
+
+.create,
+.booking {
+  padding: 30px;
+  margin-left: 30px;
+  border: 1px solid #e0e4e6;
+  border-radius: 3px;
+  text-align: center;
+}
+.create img {
+  width: 40%;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.create h3 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #0c2e60;
+  font-weight: 600;
+}
+
+.create .icon i {
+  margin-right: 10px;
+  font-size: 15px;
+}
+.create .icon i:first-child {
+  color: #1651a9;
+}
+.create .icon i:nth-child(2) {
+  color: #df0089;
+}
+.create .icon i:nth-child(3) {
+  color: #1651a9;
+}
+.create .icon i:last-child {
+  color: rgb(190, 0, 0);
+}
+
+.booking {
+  margin-top: 30px;
+  color: #0c2e60;
+  text-align: left;
+}
+.booking p span {
+  margin-left: 15px;
+}
+.booking p span i {
+  color: #ffb133;
+  font-size: 15px;
+}
+
+.booking button {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.5s;
+  letter-spacing: 2px;
+  border: none;
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #ef3e0f, #ffb800);
+  color: #fff;
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+}

@@ -1,11 +1,17 @@
 import { StarOutlined } from "@ant-design/icons";
-import { Col, Row } from "antd";
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./style.module.css";
 function ItemCourses(props) {
-  const { tenKhoaHoc, moTa, luotXem, hinhAnh } = props.item;
+  const history = useHistory();
+
+  const { tenKhoaHoc, moTa, luotXem, hinhAnh, maKhoaHoc } = props.item;
+
+  const goToDetail = () => {
+    history.push("/detail/" + maKhoaHoc);
+  };
   return (
-    <div className={styles.item}>
+    <div onClick={goToDetail} className={styles.item}>
       <div className={styles.thumbnail}>
         <img src={hinhAnh} alt="" />
       </div>
