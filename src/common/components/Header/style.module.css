@@ -29,7 +29,8 @@
 .header .navbar ul li {
   margin-right: 25px;
 }
-.header .navbar ul li a {
+.header .navbar ul li a,
+.header .profile {
   color: #000;
   font-size: 16px;
   font-weight: 600;

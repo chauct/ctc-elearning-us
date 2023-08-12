@@ -1,0 +1,28 @@
+.login {
+  padding: 150px 0;
+}
+
+.title {
+  color: #0c2e60;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 40px;
+  margin-bottom: 50px;
+}
+.form .input {
+  border: 1px solid #e0e4e6;
+  display: block;
+  padding: 10px 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form input:focus {
+  background-color: transparent;
+}
+
+/* right */
+.login .right img {
+  margin-left: 50px;
+  display: none;
+  width: 50% !important;
+}

@@ -1,9 +1,9 @@
-import axios from "axios";
-import { fetchListCourseAction } from "features/elearning/action";
-import ListCourses from "features/elearning/components/ListCourses";
-import Slider from "features/elearning/components/Slider";
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { fetchListCourseAction } from 'features/elearning/action';
+import ListCourses from 'features/elearning/components/ListCourses';
+import Slider from 'features/elearning/components/Slider';
+import Features from 'features/elearning/components/features';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 function Home() {
   const dispatch = useDispatch();
@@ -19,6 +19,7 @@ function Home() {
   return (
     <>
       <Slider />
+      <Features />
       <ListCourses />
     </>
   );

@@ -1,18 +1,16 @@
-import { Col, Row, Spin } from "antd";
-import React, { useEffect } from "react";
-import styles from "./style.module.css";
-import backend from "assets/img/backend.png";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import Slider from "react-slick";
-import ItemCourses from "../ItemCourses";
+import { Spin } from 'antd';
+import React from 'react';
+import styles from './style.module.css';
+import { useSelector } from 'react-redux';
+import Slider from 'react-slick';
+import ItemCourses from '../ItemCourses';
 
 function ListCourses() {
   const listCourses = useSelector((state) => state.elearning.listCourses);
   if (!listCourses)
     return (
-      <div style={{ textAlign: "center" }}>
-        <Spin size="large" />
+      <div style={{ textAlign: 'center' }}>
+        <Spin size='large' />
       </div>
     );
   console.log(listCourses);
@@ -53,14 +51,18 @@ function ListCourses() {
   };
   return (
     <div className={styles.cate}>
-      <div className="title">
+      <div className='title'>
         <h2>Danh sách khóa học</h2>
       </div>
-      <div className="container">
-        <Slider {...settings} className={styles.slider}>
+      <div className='container'>
+        <Slider
+          {...settings}
+          className={styles.slider}>
           {listCourses.map((item) => {
             return (
-              <div key={item.maKhoaHoc} className={styles.item}>
+              <div
+                key={item.maKhoaHoc}
+                className={styles.item}>
                 <ItemCourses item={item} />
               </div>
             );
